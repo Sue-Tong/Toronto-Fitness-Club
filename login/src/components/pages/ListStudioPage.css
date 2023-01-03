@@ -1,0 +1,21 @@
+#studios {
+    /* position:absolute; */
+    width:400px;
+    left:50%;
+    margin-left:100px;
+  }
+
+.left_button {
+    /* width:400px; */
+    left:50%;
+    margin-left: 200px;
+}
+
+.right_button {
+    left:140%;
+    margin-left:600px;
+}
+
+  .background {
+    background-color: lightcyan;
+  }
