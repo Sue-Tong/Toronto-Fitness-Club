@@ -1,0 +1,1079 @@
+{
+	"info": {
+		"_postman_id": "b83f0841-3f1e-4a60-9539-62dacc40c6c1",
+		"name": "New Collection Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23921685"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "password1",
+							"value": "12345678",
+							"type": "text"
+						},
+						{
+							"key": "password2",
+							"value": "12345678",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "tong.su@mail.utoronto.ca",
+							"type": "text"
+						},
+						{
+							"key": "first_name",
+							"value": "Tong",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Su",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/accounts/register/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"accounts",
+						"register",
+						""
+					]
+				},
+				"description": "This api is used to register a user"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/accounts/login/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"accounts",
+						"login",
+						""
+					]
+				},
+				"description": "This api is used to log in"
+			},
+			"response": []
+		},
+		{
+			"name": "check profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY5MDYxMDAxLCJpYXQiOjE2Njg5NzQ2MDEsImp0aSI6IjkyOTQ1ZmYwNjE0ODRiOGJhZDM2MDdhNjgyMjc2NzgwIiwidXNlcl9pZCI6MjN9.Zs7r1CKOtavzoyusNTbQYKyFl7z7liql2aMz-0uh5zA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/accounts/profile/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"accounts",
+						"profile",
+						""
+					]
+				},
+				"description": "This api is used to get user profile"
+			},
+			"response": []
+		},
+		{
+			"name": "update profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY5MDY2NzQyLCJpYXQiOjE2Njg5ODAzNDIsImp0aSI6IjdmMzQzMTAxNWUzZjQ2NDk5MDUxMWJiZjJhMTQ3OGU5IiwidXNlcl9pZCI6Mn0.5IxVQ1cJyD6qVYz8aZRud26hE9JcMwUx1iC89OpMhJo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "phone",
+							"value": "12345678",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "tong.su@mail.utoronto.ca",
+							"type": "text"
+						},
+						{
+							"key": "first_name",
+							"value": "To",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Su",
+							"type": "text"
+						},
+						{
+							"key": "avatar",
+							"type": "file",
+							"src": "ruRnh.jpeg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/accounts/profile/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"accounts",
+						"profile",
+						""
+					]
+				},
+				"description": "This api is used to update user profile"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Card",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY5MDY2NzQyLCJpYXQiOjE2Njg5ODAzNDIsImp0aSI6IjdmMzQzMTAxNWUzZjQ2NDk5MDUxMWJiZjJhMTQ3OGU5IiwidXNlcl9pZCI6Mn0.5IxVQ1cJyD6qVYz8aZRud26hE9JcMwUx1iC89OpMhJo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "card1",
+							"type": "text"
+						},
+						{
+							"key": "cvv",
+							"value": "123",
+							"type": "text"
+						},
+						{
+							"key": "card_number",
+							"value": "1234123412341234",
+							"type": "text"
+						},
+						{
+							"key": "expire_date",
+							"value": "2022-12-25",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/card/update/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"card",
+						"update",
+						""
+					]
+				},
+				"description": "This api is used to update user card"
+			},
+			"response": []
+		},
+		{
+			"name": "Subscribe",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY5MDY2NzQyLCJpYXQiOjE2Njg5ODAzNDIsImp0aSI6IjdmMzQzMTAxNWUzZjQ2NDk5MDUxMWJiZjJhMTQ3OGU5IiwidXNlcl9pZCI6Mn0.5IxVQ1cJyD6qVYz8aZRud26hE9JcMwUx1iC89OpMhJo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/subscription/add/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"subscription",
+						"add",
+						""
+					]
+				},
+				"description": "This api is used to subscribe studio"
+			},
+			"response": []
+		},
+		{
+			"name": "Class enrol",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY5MDY2NzQyLCJpYXQiOjE2Njg5ODAzNDIsImp0aSI6IjdmMzQzMTAxNWUzZjQ2NDk5MDUxMWJiZjJhMTQ3OGU5IiwidXNlcl9pZCI6Mn0.5IxVQ1cJyD6qVYz8aZRud26hE9JcMwUx1iC89OpMhJo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/class/enrol/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"class",
+						"enrol",
+						""
+					]
+				},
+				"description": "This api is used to enrol class"
+			},
+			"response": []
+		},
+		{
+			"name": "Class history",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY5MDY2NzQyLCJpYXQiOjE2Njg5ODAzNDIsImp0aSI6IjdmMzQzMTAxNWUzZjQ2NDk5MDUxMWJiZjJhMTQ3OGU5IiwidXNlcl9pZCI6Mn0.5IxVQ1cJyD6qVYz8aZRud26hE9JcMwUx1iC89OpMhJo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/accounts/class_history/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"accounts",
+						"class_history",
+						""
+					]
+				},
+				"description": "This api is used to check class history"
+			},
+			"response": []
+		},
+		{
+			"name": "Class schedule",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY5MDY2NzQyLCJpYXQiOjE2Njg5ODAzNDIsImp0aSI6IjdmMzQzMTAxNWUzZjQ2NDk5MDUxMWJiZjJhMTQ3OGU5IiwidXNlcl9pZCI6Mn0.5IxVQ1cJyD6qVYz8aZRud26hE9JcMwUx1iC89OpMhJo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/accounts/class_schedule/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"accounts",
+						"class_schedule",
+						""
+					]
+				},
+				"description": "This api is used to check class schedule"
+			},
+			"response": []
+		},
+		{
+			"name": "Class drop",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY5MDY2NzQyLCJpYXQiOjE2Njg5ODAzNDIsImp0aSI6IjdmMzQzMTAxNWUzZjQ2NDk5MDUxMWJiZjJhMTQ3OGU5IiwidXNlcl9pZCI6Mn0.5IxVQ1cJyD6qVYz8aZRud26hE9JcMwUx1iC89OpMhJo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "cancel",
+							"value": "all",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/accounts/class_drop/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"accounts",
+						"class_drop",
+						""
+					]
+				},
+				"description": "This api is used to drop a class"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Subscription",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY5MDY2NzQyLCJpYXQiOjE2Njg5ODAzNDIsImp0aSI6IjdmMzQzMTAxNWUzZjQ2NDk5MDUxMWJiZjJhMTQ3OGU5IiwidXNlcl9pZCI6Mn0.5IxVQ1cJyD6qVYz8aZRud26hE9JcMwUx1iC89OpMhJo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "studio",
+							"value": "yoga",
+							"type": "text"
+						},
+						{
+							"key": "id",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/subscription/update/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"subscription",
+						"update",
+						""
+					]
+				},
+				"description": "This api is used to update subscription"
+			},
+			"response": []
+		},
+		{
+			"name": "Cancel Subscription",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY5MDY2NzQyLCJpYXQiOjE2Njg5ODAzNDIsImp0aSI6IjdmMzQzMTAxNWUzZjQ2NDk5MDUxMWJiZjJhMTQ3OGU5IiwidXNlcl9pZCI6Mn0.5IxVQ1cJyD6qVYz8aZRud26hE9JcMwUx1iC89OpMhJo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "studio",
+							"value": "yoga",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/subscription/cancel/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"subscription",
+						"cancel",
+						""
+					]
+				},
+				"description": "This api is used to cancel subscription"
+			},
+			"response": []
+		},
+		{
+			"name": "Payment History",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY5MDY2NzQyLCJpYXQiOjE2Njg5ODAzNDIsImp0aSI6IjdmMzQzMTAxNWUzZjQ2NDk5MDUxMWJiZjJhMTQ3OGU5IiwidXNlcl9pZCI6Mn0.5IxVQ1cJyD6qVYz8aZRud26hE9JcMwUx1iC89OpMhJo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/payment/history/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"payment",
+						"history",
+						""
+					]
+				},
+				"description": "This api is used to see payment history"
+			},
+			"response": []
+		},
+		{
+			"name": "Payment schedule",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY5MDY2NzQyLCJpYXQiOjE2Njg5ODAzNDIsImp0aSI6IjdmMzQzMTAxNWUzZjQ2NDk5MDUxMWJiZjJhMTQ3OGU5IiwidXNlcl9pZCI6Mn0.5IxVQ1cJyD6qVYz8aZRud26hE9JcMwUx1iC89OpMhJo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/payment/future/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"payment",
+						"future",
+						""
+					]
+				},
+				"description": "This api is used to see payment schedule"
+			},
+			"response": []
+		},
+		{
+			"name": "make payment",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY5MDY2NzQyLCJpYXQiOjE2Njg5ODAzNDIsImp0aSI6IjdmMzQzMTAxNWUzZjQ2NDk5MDUxMWJiZjJhMTQ3OGU5IiwidXNlcl9pZCI6Mn0.5IxVQ1cJyD6qVYz8aZRud26hE9JcMwUx1iC89OpMhJo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/payment/make_payment/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"payment",
+						"make_payment",
+						""
+					]
+				},
+				"description": "This api is used to make payment"
+			},
+			"response": []
+		},
+		{
+			"name": "getAllStudio",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/studio/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"studio",
+						""
+					]
+				},
+				"description": "list all studios starting from the nearest."
+			},
+			"response": []
+		},
+		{
+			"name": "getNearestStudio",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/studio/nearest/?longitude=-70&latitude=43&limit=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"studio",
+						"nearest",
+						""
+					],
+					"query": [
+						{
+							"key": "longitude",
+							"value": "-70"
+						},
+						{
+							"key": "latitude",
+							"value": "43"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						}
+					]
+				},
+				"description": "This API is used to show the nearest studio for the user."
+			},
+			"response": []
+		},
+		{
+			"name": "getDetailsOfStudio1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/studio/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"studio",
+						"1",
+						""
+					]
+				},
+				"description": "This API is used to get detailed studio information with id for a user. By changing the id number, we can get other studios."
+			},
+			"response": []
+		},
+		{
+			"name": "getStudioClass",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/studio/1/class",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"studio",
+						"1",
+						"class"
+					]
+				},
+				"description": "This API is used to get information about classes in a studio with a studio’s id"
+			},
+			"response": []
+		},
+		{
+			"name": "getAllClassName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/class/name/all/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"class",
+						"name",
+						"all",
+						""
+					]
+				},
+				"description": "This API is used to get all class names so that we can search and filter by class names."
+			},
+			"response": []
+		},
+		{
+			"name": "getAllCoachName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/class/coach/all/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"class",
+						"coach",
+						"all",
+						""
+					]
+				},
+				"description": "This API is used to get all coach names so that we can search and filter by coach names."
+			},
+			"response": []
+		},
+		{
+			"name": "getAllClassStartTime",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/class/start-time/all/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"class",
+						"start-time",
+						"all",
+						""
+					]
+				},
+				"description": "This API is used to get all start times of classes so that we can search and filter by time range"
+			},
+			"response": []
+		},
+		{
+			"name": "getAllClassEndTime",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/class/end-time/all/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"class",
+						"end-time",
+						"all",
+						""
+					]
+				},
+				"description": "This API is used to get all end times of classes so that we can search and filter by time range"
+			},
+			"response": []
+		},
+		{
+			"name": "getAllAmenityType",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/amenity/type/all/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"amenity",
+						"type",
+						"all",
+						""
+					]
+				},
+				"description": "This API is used to get all amenity types so that we can search and filter by amenity"
+			},
+			"response": []
+		},
+		{
+			"name": "searchAndFilterStudio",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/studio/?name=yoga&amenity-type=care&class-name=yoga&coach=121",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"studio",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "yoga"
+						},
+						{
+							"key": "amenity-type",
+							"value": "care"
+						},
+						{
+							"key": "class-name",
+							"value": "yoga"
+						},
+						{
+							"key": "coach",
+							"value": "121"
+						}
+					]
+				},
+				"description": "This API is used to list all studios with search/filter by studio name, amenities, class names, and coaches that hold classes in those studios. Params: coach, date, name, class-name, amenity-type"
+			},
+			"response": []
+		},
+		{
+			"name": "searchAndFilterClass",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/studio/2/class?name=baseball&coach=121&date=2022-11-15&start-time=12:00:00&end-time=19:00:00",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"studio",
+						"2",
+						"class"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "baseball"
+						},
+						{
+							"key": "coach",
+							"value": "121"
+						},
+						{
+							"key": "date",
+							"value": "2022-11-15"
+						},
+						{
+							"key": "start-time",
+							"value": "12:00:00"
+						},
+						{
+							"key": "end-time",
+							"value": "19:00:00"
+						}
+					]
+				},
+				"description": "This API is used to list all classes ordered by start time with a search/filter by class name, coach name, coach name, date and time range that hold classes in those studios. Params: coach, date, start-time, end-time"
+			},
+			"response": []
+		}
+	]
+}

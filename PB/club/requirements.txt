@@ -1,0 +1,7 @@
+django
+djangorestframework
+django-recurrence
+djangorestframework-simplejwt
+Pillow
+python-dateutil
+django-cors-headers
